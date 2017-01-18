@@ -7,31 +7,49 @@
     <div class="slide-bg">
             <?php get_template_part('parts/slider'); ?>
     </div>
-  <h1><?php the_title(); ?> Frontpage</h1> 
-    <h4><?php get_the_author(); ?></h4>
+  <h1><?php bloginfo( 'name' ); ?> Frontpage</h1> 
+    <h4><?php bloginfo('description'); ?></h4>
         
 </div>
     
 
-<div class="container">
+<div class="container" >
     
-    <div class="row">
-        
+ <div class="row">
+   <?php  // get_sidebar(); ?>
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!--<div id="about" class="container-fluid">
+  <div class="row"> -->
+
+        <div class="col-sm-8" id-"grid">
+<!-- Container (About Section) -->
+<!--<div id="about" class="container-fluid">
   <div class="row">
-      <?php get_sidebar(); ?>
+
         <div class="col-sm-8">
+    -->          
+            
+<!-- Posts -->
+
+<div id="grid" class="container">
+  <div id="posts">    
       <?php 
 	 if ( have_posts() ) { 
 	 while ( have_posts() ) : the_post();
 	 ?>
-	 <div class="blog-post">
-<!--	 <h2 class="blog-post-title"><?php the_title(); ?></h2> -->
-	 <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
-	 <?php the_content(); ?>
-	 </div><!-- /.blog-post -->
-	 <?php
+    <div class="post">
+      	 <?php if ( has_post_thumbnail() ) : ?>
+    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+        <?php the_post_thumbnail('medium'); ?>
+    </a>
+<?php endif; ?>
+      <br>
+      <br>
+      <strong><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong>
+      <br>
+      <small><?php the_date(); ?> by <?php the_author(); ?></small>
+    </div>
+       <?php
 	 endwhile;
 	 }
        ?>
@@ -46,117 +64,8 @@
      </div>
 </div>	
         
-        <header id="header" class="container">
-  <h1>Bootstrap 3 + Masonry 3</h1>
-  <p class="lead">
-    This is deployed with the <code>#grid</code> div fluid (that is, it has no Bootstrap <code>.container</code> class). To make it fixed simply add the <code>.container</code> class to it. Use the media queries in <strong>style.css</strong> to change
-    the grid's post widths and margins.
-  </p>
-  <hr>
-</header>
-
-
-<!-- Posts -->
-
-<!-- <div id="grid" class="container"> -->
-<div class="container" id="grid">
-  <div id="posts">
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/400x600">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
-    <div class="post">
-      <img src="http://placehold.it/600x400">
-      <br>
-      <br>
-      <strong>Title Goes Here</strong>
-      <br>
-      <small>Category</small>
-    </div>
+  
   </div>
+
 </div>
 <?php get_footer(); ?> 

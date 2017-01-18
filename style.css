@@ -232,6 +232,9 @@ Text Domain: mrvinceotheme
   margin: 0 0 20px;
   text-align: center;
   width: 100%;
+  background-color: #FFF;
+  padding: 8px 8px 15px 8px;
+  box-shadow: 0 2px 5px 0px rgba(169, 169, 169, 0.1), 0 6px 10px 0px rgba(0, 0, 0, 0.05);
 }
 
 .post img {
