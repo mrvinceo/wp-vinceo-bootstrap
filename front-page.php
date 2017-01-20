@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<!-- The Jumbotron banner containing title, and featured image as BG -->
+<!-- The Jumbotron banner containing title, and image as a parallax scrolling BG -->
 
- <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/Edited-IMG_7922.jpg') no-repeat center center fixed;">
+ <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/Edited-IMG_7922.jpg') no-repeat center center fixed; background-size:cover;">
 <div class="jumbotron text-center">
    <h1><?php bloginfo( 'name' ); ?></h1> 
     <h4><?php bloginfo('description'); ?></h4>
@@ -10,7 +10,7 @@
 </div>
 </section>
  
-<div class="container" >
+<div class="container">
     <div class="row">
         <div class="col-sm-8" id-"grid">
 

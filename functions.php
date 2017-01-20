@@ -13,7 +13,7 @@ function mrvinceotheme_enqueue_scripts() {
     wp_enqueue_script( 'masonryJs', get_template_directory_uri().'/js/masonry.pkgd.min.js', $dependencies, '', true );
     wp_enqueue_script( 'masonryCodeJs', get_template_directory_uri().'/js/masonryCode.js', $dependencies, '', true ); 
     wp_enqueue_script( 'parallaxBg', get_template_directory_uri().'/js/parallaxbg.js', $dependencies, '', true );   
-
+    wp_enqueue_script( 'scrollJs', get_template_directory_uri().'/inc/scroll.js', $dependencies, '', true);
 }
 
 // Register Custom Navigation Walker
