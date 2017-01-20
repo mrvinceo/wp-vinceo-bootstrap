@@ -1,33 +1,19 @@
 <?php get_header(); ?>
 
 <!-- The Jumbotron banner containing title, and featured image as BG -->
-<div class="bg"></div>
 
+ <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/Edited-IMG_7922.jpg') no-repeat center center fixed;">
 <div class="jumbotron text-center">
-    <div class="slide-bg">
-            <?php get_template_part('parts/slider'); ?>
-    </div>
-  <h1><?php bloginfo( 'name' ); ?> Frontpage</h1> 
+   <h1><?php bloginfo( 'name' ); ?></h1> 
     <h4><?php bloginfo('description'); ?></h4>
         
 </div>
-    
-
+</section>
+ 
 <div class="container" >
-    
- <div class="row">
-   <?php  // get_sidebar(); ?>
-<!-- Container (About Section) -->
-<!--<div id="about" class="container-fluid">
-  <div class="row"> -->
-
+    <div class="row">
         <div class="col-sm-8" id-"grid">
-<!-- Container (About Section) -->
-<!--<div id="about" class="container-fluid">
-  <div class="row">
 
-        <div class="col-sm-8">
-    -->          
             
 <!-- Posts -->
 
@@ -68,4 +54,6 @@
   </div>
 
 </div>
+
+
 <?php get_footer(); ?> 

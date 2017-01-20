@@ -2,6 +2,7 @@
 
 function mrvinceotheme_enqueue_styles() {
     wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+
     $dependencies = array('bootstrap');
     wp_enqueue_style( 'mrvinceotheme-style', get_stylesheet_uri(), $dependencies ); 
 }
@@ -10,7 +11,9 @@ function mrvinceotheme_enqueue_scripts() {
     $dependencies = array('jquery');
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '', true );
     wp_enqueue_script( 'masonryJs', get_template_directory_uri().'/js/masonry.pkgd.min.js', $dependencies, '', true );
-    wp_enqueue_script( 'masonryCodeJs', get_template_directory_uri().'/js/masonryCode.js', $dependencies, '', true );   
+    wp_enqueue_script( 'masonryCodeJs', get_template_directory_uri().'/js/masonryCode.js', $dependencies, '', true ); 
+    wp_enqueue_script( 'parallaxBg', get_template_directory_uri().'/js/parallaxbg.js', $dependencies, '', true );   
+
 }
 
 // Register Custom Navigation Walker
@@ -28,8 +31,6 @@ function bootstrap_nav()
             'walker'            => new wp_bootstrap_navwalker())
     );
 }
-
-wp_enqueue_script( 'script', get_template_directory_uri() . '/js/parallax.js', array ( 'jquery' ), 1.1, true);
 
 
 add_action( 'wp_enqueue_scripts', 'mrvinceotheme_enqueue_styles' );

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-
+<section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/Edited-IMG_7922.jpg') no-repeat center center fixed;">
 <div class="jumbotron text-center">
   <h1 style="color: #898989;">Articles</h1> 
         
 </div>
-
+</section>
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="row">

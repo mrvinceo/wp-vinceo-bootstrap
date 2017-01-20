@@ -297,3 +297,15 @@ Can this be done with Masonry options? */
     padding-right: 15px;
   }
 }
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+    color:#fff;
+    background-size:cover;
+}
