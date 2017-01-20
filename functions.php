@@ -7,6 +7,14 @@ function mrvinceotheme_enqueue_styles() {
     wp_enqueue_style( 'mrvinceotheme-style', get_stylesheet_uri(), $dependencies ); 
 }
 
+function mrvinceotheme_add_google_fonts() {
+
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Catamaran|PT+Mono', false ); 
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+
 function mrvinceotheme_enqueue_scripts() {
     $dependencies = array('jquery');
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '', true );
@@ -14,6 +22,7 @@ function mrvinceotheme_enqueue_scripts() {
     wp_enqueue_script( 'masonryCodeJs', get_template_directory_uri().'/js/masonryCode.js', $dependencies, '', true ); 
     wp_enqueue_script( 'parallaxBg', get_template_directory_uri().'/js/parallaxbg.js', $dependencies, '', true );   
     wp_enqueue_script( 'scrollJs', get_template_directory_uri().'/inc/scroll.js', $dependencies, '', true);
+    wp_enqueue_script( 'typeTitle', get_template_directory_uri().'/js/typetitle.js', $dependencies, '', true);
 }
 
 // Register Custom Navigation Walker

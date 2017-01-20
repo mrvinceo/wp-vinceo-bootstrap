@@ -2,10 +2,13 @@
 
 <!-- The Jumbotron banner containing title, and image as a parallax scrolling BG -->
 
- <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/Edited-IMG_7922.jpg') no-repeat center center fixed; background-size:cover;">
+ <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/beachart-2.jpg') no-repeat center center fixed; background-size:cover;">
 <div class="jumbotron text-center">
-   <h1><?php bloginfo( 'name' ); ?></h1> 
-    <h4><?php bloginfo('description'); ?></h4>
+    <h1>
+  <a href="#" class="typewrite" data-period="2000" data-type='[ "<?php bloginfo( 'name' ); ?>", "We are Creative.", "<?php bloginfo('description'); ?>", "I Love to Develop." ]'>
+    <span class="wrap"></span>
+  </a>
+</h1>
         
 </div>
 </section>

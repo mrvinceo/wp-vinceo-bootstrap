@@ -1,14 +1,14 @@
 /*
 Theme Name: Mr Vinceo Theme
-Theme URI: https://www.lyrathemes.com/bootstrap-wordpress-theme-tutorial/
+Theme URI: https://github.com/mrvinceo/wp-vinceo-bootstrap
 Author: Paul Vincent
-Author URI: https://www.lyrathemes.com
-Description: A basic WP theme using the Bootstrap framework.
+Author URI: https://github.com/mrvinceo
+Description: A Bootstrap 3 based theme using Masonry Grid for the homepage and parallax headers for pages, posts, categories and homepage.
 Version: 1.0
 Text Domain: mrvinceotheme
 */
   body {
-      font: 400 15px Lato, sans-serif;
+      font-family: 'PT Mono', monospace;
       line-height: 1.8;
       color: #818181;
   }
@@ -31,7 +31,7 @@ Text Domain: mrvinceotheme
       color: #fff;
       margin-top: 20px;
       margin-bottom: 60px;
-      font-family: Montserrat, sans-serif;
+      font-family: 'PT Mono', monospace;
   }
   .container-fluid {
       padding: 60px 50px;
@@ -116,7 +116,7 @@ Text Domain: mrvinceotheme
       color: #fff;
   }
   .navbar {
-      padding-top: 20px;
+      padding: 20px 0px 20px 0px;
       margin-bottom: 0;
       background-color: #c7322c;
       z-index: 9999;
@@ -126,6 +126,7 @@ Text Domain: mrvinceotheme
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
+      box-shadow: 0 2px 5px 0px rgba(29, 29, 29, 0.21), 0px 0px 16px 4px rgba(0, 0, 0, 0.18);
   }
   .navbar-nav {
       float: right;
@@ -307,5 +308,4 @@ section {
 
 .bg-1 {
     color:#fff;
-    background-size:cover;
 }
