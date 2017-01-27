@@ -1,15 +1,20 @@
 <?php get_header(); ?>
 <!-- The Jumbotron banner containing title, and featured image as BG -->
-<div class="bg"></div>
+<?php
+$thumbnail = get_the_post_thumbnail_url();
+$post_date = the_date();
+$author = the_author();
+?>
+ <section class="bg-1 text-center" style="background: url('<?php echo $thumbnail; ?>') no-repeat center center fixed; background-size:cover;">
 
 <div class="jumbotron text-center">
-    <div class="slide-bg">
-            <?php get_template_part('parts/slider'); ?>
-    </div>
-  <h1><?php the_title(); ?></h1> 
-    <h4><?php get_the_author(); ?></h4>
+<h1>
+<?php the_title(); ?>
+
+</h1>
         
 </div>
+</section>
     
 
 <div class="container">

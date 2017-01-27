@@ -1,5 +1,7 @@
+
+
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+    <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
     <?php if ( is_active_sidebar( 'footer_copyright_text' ) ) { dynamic_sidebar( 'footer_copyright_text' ); } ?></footer>
@@ -40,6 +42,7 @@ $(document).ready(function(){
   });
 })
 </script>
+
 
 </body>
 </html>

@@ -9,7 +9,7 @@ function mrvinceotheme_enqueue_styles() {
 
 function mrvinceotheme_add_google_fonts() {
 
-wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Catamaran|PT+Mono', false ); 
+wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Raleway:400,600', false ); 
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
@@ -27,6 +27,11 @@ function mrvinceotheme_enqueue_scripts() {
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
+
+/**
+* Customizer additional fields etc.
+*/
+require get_template_directory() . '/inc/customizer.php';
 
 // Bootstrap navigation
 function bootstrap_nav()
@@ -90,9 +95,25 @@ add_action( 'widgets_init', 'mrvinceotheme_widgets_init' );
 
 // Custom Logo support:
 function mrvinceotheme_setup() {
- add_theme_support('custom-logo');
+ add_theme_support('custom-logo', array(
+   'height'      => 175,
+   'width'       => 600,
+   'flex-width' => true,
+) );
 }
 
 add_action('after_setup_theme', 'mrvinceotheme_setup');
 
+?>
+<?php
+// Change the footer text in Genesis with a back up if blank
+add_filter('mrvinceotheme_footer_creds_text', 'mrvinceotheme_footer_text');
+function mrvinceotheme_footer_text() {
+ if( get_theme_mod( 'footer_text_block') != "" ) {
+ echo get_theme_mod( 'footer_text_block');
+ }
+ else{
+ echo 'Copyright &copy; 2016 · Genesis Sample Theme on Genesis Framework · WordPress · Log out'; // Add you default footer text here
+ }
+}
 ?>

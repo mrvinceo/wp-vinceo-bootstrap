@@ -47,6 +47,10 @@ Text Domain: mrvinceotheme
       color: #f4511e;
       font-size: 200px;
   }
+  .custom-logo {
+      max-width: 75px;
+      max-height: 75px;
+  }
   .thumbnail {
       padding: 0 0 15px 0;
       border: none;
@@ -118,7 +122,7 @@ Text Domain: mrvinceotheme
   .navbar {
       padding: 20px 0px 20px 0px;
       margin-bottom: 0;
-      background-color: #c7322c;
+      background-color: rgba(49, 49, 49, 0.92);
       z-index: 9999;
       border: 0;
       font-size: 12px !important;

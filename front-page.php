@@ -2,19 +2,49 @@
 
 <!-- The Jumbotron banner containing title, and image as a parallax scrolling BG -->
 
- <section class="bg-1 text-center" style="background: url('http://localhost:8888/wordpress/wp-content/uploads/2017/01/beachart-2.jpg') no-repeat center center fixed; background-size:cover;">
+ <section class="bg-1 text-center" style="background: url('<?php echo get_template_directory_uri(); ?>/assets/beachart-2.jpg') no-repeat center center fixed; background-size:cover;">
+
 <div class="jumbotron text-center">
-    <h1>
-  <a href="#" class="typewrite" data-period="2000" data-type='[ "<?php bloginfo( 'name' ); ?>", "We are Creative.", "<?php bloginfo('description'); ?>", "I Love to Develop." ]'>
-    <span class="wrap"></span>
-  </a>
+<h1>
+    <?php bloginfo( 'name' ); ?>
 </h1>
+    
+  <h2 style="color: #fff;" class="typewrite" data-period="2000" data-type='[ "Wordpress Design...", "AWS Architecture Expertise...", "Digital Marketing Expertise." ]'>
+    <span class="wrap"></span>
+  </h2>
+
         
 </div>
 </section>
  
 <div class="container">
     <div class="row">
+        
+                <div class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="<?php echo get_theme_mod( 'panel_text_glyph'); ?> logo-small"></span>
+      <h4><?php echo get_theme_mod( 'panel_text_head_1'); ?></h4>
+        <p> <?php echo get_theme_mod( 'panel_text_block'); ?></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="<?php echo get_theme_mod( 'panel_text_glyph_2'); ?> logo-small"></span>
+      <h4><?php echo get_theme_mod( 'panel_text_head_2'); ?></h4>
+        <p> <?php echo get_theme_mod( 'panel_text_block_2'); ?></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="<?php echo get_theme_mod( 'panel_text_glyph_3'); ?> logo-small"></span>
+      <h4><?php echo get_theme_mod( 'panel_text_head_3'); ?></h4>
+    <p> <?php echo get_theme_mod( 'panel_text_block_3'); ?></p>
+    </div>
+    </div>
+    <br><br>
+
+</div>
+        
         <div class="col-sm-8" id-"grid">
 
             
@@ -53,10 +83,12 @@
      </div>
 </div>	
         
+
   
   </div>
 
 </div>
-
+ <p>
+ </p>
 
 <?php get_footer(); ?> 
