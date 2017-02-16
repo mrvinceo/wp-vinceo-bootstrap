@@ -33,6 +33,10 @@ Text Domain: mrvinceotheme
       margin-bottom: 60px;
       font-family: 'PT Mono', monospace;
   }
+  .header-container {
+      max-width: 95%;
+      padding-left: 1%;
+  }
   .container-fluid {
       padding: 60px 50px;
   }
@@ -48,8 +52,8 @@ Text Domain: mrvinceotheme
       font-size: 200px;
   }
   .custom-logo {
-      max-width: 75px;
-      max-height: 75px;
+      max-width: 250px;
+      max-height: 88px;
   }
   .thumbnail {
       padding: 0 0 15px 0;
