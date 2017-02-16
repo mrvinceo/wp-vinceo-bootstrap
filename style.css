@@ -120,7 +120,7 @@ Text Domain: mrvinceotheme
       color: #fff;
   }
   .navbar {
-      padding: 20px 0px 20px 0px;
+      padding: 20px 0px 40px 0px;
       margin-bottom: 0;
       background-color: rgba(49, 49, 49, 0.92);
       z-index: 9999;
@@ -131,6 +131,9 @@ Text Domain: mrvinceotheme
       border-radius: 0;
       font-family: Montserrat, sans-serif;
       box-shadow: 0 2px 5px 0px rgba(29, 29, 29, 0.21), 0px 0px 16px 4px rgba(0, 0, 0, 0.18);
+  }
+  .navbar-header h1 {
+  color: #898989;
   }
   .navbar-nav {
       float: right;
